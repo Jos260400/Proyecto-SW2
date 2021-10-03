@@ -1,0 +1,136 @@
+.label{
+  color: $primary;
+  display: block;
+  font-size: 17px;
+  left: 20px;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: translateY(75%);
+  transition-duration: .15s;
+  transition-property: font-size,transform;
+}
+
+.input-container{
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1.6px solid #423f3f80;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 17px;
+  line-height: 1.41;
+  padding: 15px 15px 10px 10px;
+  width: 100%;
+  transition-duration: .15s;
+  transition-property: box-shadow;
+  margin-top: 2rem;
+  &:focus{
+    box-shadow: 0 20px 20px 0 #0000001C;
+  }
+}
+
+.input{
+  border: none;
+  background-color: inherit;
+  width: 100%;
+  &:focus{
+    outline:0;
+  }
+}
+
+.input-icon {
+  font-size: 2rem;
+  color: $primary;
+  &.is-filled{
+      color: $gold
+  }
+}
+
+
+.btn-meeting{
+  border-radius: 500px;
+  line-height: 1;
+  padding: 14.5px;
+  transform: translate3d(0px,0px,0px);
+  transition-duration: 33ms;
+  transition-property: background-color, transform;
+}
+
+.btn-fill{
+  background-color: $primary;
+  border: none;
+  color: #fff;
+  padding: 0.7rem 21px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &:hover{
+    transform: scale(1.04);
+    background-color: #413e36;
+    border-color: #3e3a33;
+  }
+}
+
+.border-btn{
+  background-color: transparent;
+  color: blueviolet;
+  border: solid 1px #FFFFFF;
+  margin-bottom: 18px;
+  &:hover{
+    transform: scale(1.04);
+    background-color: blueviolet;
+    color: coral;
+  }
+}
+
+.divider{
+  display: table;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  margin: 0px auto 1em;
+  color: rgb(117, 117, 117);
+  position: relative;
+  text-align: center;
+  width: 95%;
+  &:before, &:after{
+    border-top: 1px solid rgb(189, 189, 189);
+    content: "";
+    display: table-cell;
+    position: relative;
+    top: 0.8em;
+    width: 45%;
+  }
+}
+
+.form-container{
+  margin-top: 2rem;
+  width: 450px;
+}
+
+@mixin make-container($padding-x: $container-padding-x) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.auth-container {
+  @include make-container(var(--bs-gutter-x, 3rem));
+}
+
+.mt-z4{
+  margin-top: 2rem;
+}
+
+.poppins-font{
+  font-family: Poppins, serif;
+}
+
+.exo-font{
+  font-family: 'Exo 2', serif;
+}
+
